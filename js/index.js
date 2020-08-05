@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+/*--------------------NAV---------------------*/
 
 let navMenu = document.querySelectorAll('nav a')
 
@@ -49,21 +50,15 @@ const partners = document.createElement('a')
 partners.textContent = 'Partners'
 partners.href = '#'
 
-
-
 const projects = document.createElement('a')
 projects.textContent = 'Projects'
 projects.href = '#'
-
-
 
 const nav = document.querySelector('nav')
 nav.appendChild(partners)
 
 const navNew = document.querySelector('nav')
 nav.prepend(projects)
-
-
 
 const nav1 = navMenu[0]
 const nav2 = navMenu[1]
@@ -79,17 +74,50 @@ nav4.textContent = siteContent['nav']['nav-item-4']
 nav5.textContent = siteContent['nav']['nav-item-5']
 nav6.textContent = siteContent['nav']['nav-item-6']
 
+let allNav = document.querySelectorAll ("a");
+console.log(allNav);
+for (let i = 0; i < allNav.length; i++) {
+  allNav[i].style.color = "green"
+}
 
-navMenu = document.querySelectorAll('nav a');
+const topSect = document.querySelector('.cta');
+const topSectHeading = topSect.querySelector('.cta-text h1');
+const topSectImage = topSect.querySelector('#cta-img');
+const topSectButton = topSect.querySelector('button');
 
-const topSection = document.querySelector('.cta');
-
-const topSectTitle = topSection.querySelector('.cta-text h1');
-const topSectImage = topSection.querySelector('#cta-img');
-const topSectButton = topSection.querySelector('button');
-
-
-
-topSectTitle.textContent = siteContent['cta']['h1']
+topSectHeading.textContent = siteContent['cta']['h1']
 topSectButton.textContent = siteContent['cta']['button']
 topSectImage.setAttribute('src', siteContent['cta']['img-src'])
+
+
+/*--------------------middle content--------------------*/
+
+const midSectImg = document.querySelector('#middle-img')
+const midSect = document.querySelector('.main-content .top-content')
+
+const midSectBot = document.querySelector('.main-content .bottom-content')
+const midSectHeading1 = midSect.querySelector('.text-content:nth-of-type(1) h4')
+const midSectHeading2 = midSect.querySelector('.text-content:nth-of-type(2) h4')
+const midSectHeading3 = midSectBot.querySelector('.text-content:nth-of-type(1) h4')
+const midSectHeading4 = midSectBot.querySelector('.text-content:nth-of-type(2) h4')
+const midSectHeading5 = midSectBot.querySelector('.text-content:nth-of-type(3) h4')
+
+midSectHeading1.textContent = siteContent['main-content']['features-h4']
+midSectHeading2.textContent = siteContent['main-content']['about-h4']
+midSectHeading3.textContent = siteContent['main-content']['services-h4']
+midSectHeading4.textContent = siteContent['main-content']['product-h4']
+midSectHeading5.textContent = siteContent['main-content']['vision-h4']
+
+const midSectP1 = midSect.querySelector('.text-content:nth-of-type(1) p')
+const midSectP2 = midSect.querySelector('.text-content:nth-of-type(2) p')
+const midSectP3 = midSectBot.querySelector('.text-content:nth-of-type(1) p')
+const midSectP4 = midSectBot.querySelector('.text-content:nth-of-type(2) p')
+const midSectP5 = midSectBot.querySelector('.text-content:nth-of-type(3) p')
+
+midSectP1.textContent = siteContent['main-content']['features-content']
+midSectP2.textContent = siteContent['main-content']['about-content']
+midSectP3.textContent = siteContent['main-content']['services-content']
+midSectP4.textContent = siteContent['main-content']['product-content']
+midSectP5.textContent = siteContent['main-content']['vision-content']
+
+const midImg = midSectImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
