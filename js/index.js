@@ -41,42 +41,55 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let allNav = document.querySelectorAll ("a");
-// console.log(allNav);
-// for (let i = 0; i < allNav.length; i++) {
-//   allNav[i].style.color = "green"
-// }
+
+
+let navMenu = document.querySelectorAll('nav a')
+
+const partners = document.createElement('a')
+partners.textContent = 'Partners'
+partners.href = '#'
 
 
 
-
-const allNav = document.querySelectorAll('a')
-
-allNav[0].textContent = "Services";
-allNav[1].textContent = "Product";
-allNav[2].textContent = "Vision";
-allNav[3].textContent = "Features";
-allNav[4].textContent = "About";
-allNav[5].textContent = "Contact";
-
-
-allNav.forEach(function(element){
-  element.style.color = "green"
-})
-
-const headTitle = document.querySelector("h1");
-headTitle.textContent = "DOM IS AWESOME";
-
-const startButton = document.querySelector("button");
-startButton.textContent = "Get Started";
-
-
-const logoImg = document.querySelector("#cta-img");
-const middleImg = document.querySelector("#middle-img");
-logoImg.src="img/header-img.png";
-middleImg.src="img/mid-page-accent.jpg";
-
-const textCon = document.getElementsByClassName(text-content);
+const projects = document.createElement('a')
+projects.textContent = 'Projects'
+projects.href = '#'
 
 
 
+const nav = document.querySelector('nav')
+nav.appendChild(partners)
+
+const navNew = document.querySelector('nav')
+nav.prepend(projects)
+
+
+
+const nav1 = navMenu[0]
+const nav2 = navMenu[1]
+const nav3 = navMenu[2]
+const nav4 = navMenu[3]
+const nav5 = navMenu[4]
+const nav6 = navMenu[5]
+
+nav1.textContent = siteContent['nav']['nav-item-1']
+nav2.textContent = siteContent['nav']['nav-item-2']
+nav3.textContent = siteContent['nav']['nav-item-3']
+nav4.textContent = siteContent['nav']['nav-item-4']
+nav5.textContent = siteContent['nav']['nav-item-5']
+nav6.textContent = siteContent['nav']['nav-item-6']
+
+
+navMenu = document.querySelectorAll('nav a');
+
+const topSection = document.querySelector('.cta');
+
+const topSectTitle = topSection.querySelector('.cta-text h1');
+const topSectImage = topSection.querySelector('#cta-img');
+const topSectButton = topSection.querySelector('button');
+
+
+
+topSectTitle.textContent = siteContent['cta']['h1']
+topSectButton.textContent = siteContent['cta']['button']
+topSectImage.setAttribute('src', siteContent['cta']['img-src'])
