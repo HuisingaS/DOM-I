@@ -121,3 +121,27 @@ midSectP4.textContent = siteContent['main-content']['product-content']
 midSectP5.textContent = siteContent['main-content']['vision-content']
 
 const midImg = midSectImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+/*------------------bottom content-------------------*/
+
+const contactInfo = document.querySelector('.contact')
+const contactHeading = contactInfo.querySelector('h4')
+const contactAddress = contactInfo.querySelector('p:nth-of-type(1)')
+const contactPhone = contactInfo.querySelector('p:nth-of-type(2)')
+const contactEmail = contactInfo.querySelector('p:nth-of-type(3)')
+
+
+/*----------------contact information----------------*/
+
+contactHeading.textContent = siteContent['contact']['contact-h4']
+contactAddress.textContent = siteContent['contact']['address']
+contactPhone.textContent = siteContent['contact']['phone']
+contactEmail.textContent = siteContent['contact']['email']
+
+
+/*---------------------footer------------------------*/
+const footerSect = document.querySelector('footer')
+
+const footerCopy = footerSect.querySelector('p')
+footerCopy.textContent = siteContent['footer']['copyright']
